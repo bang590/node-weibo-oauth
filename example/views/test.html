@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+		<title>Sina OAuth test</title>
+		<style>
+			ul li{ list-style: none; clear:both; margin:10px 0 }
+			img {float:left;margin:0 10px 10px 0;}
+			#statusBox{width:300px}
+			.retweet{ font-size:12px; margin:5px;}
+		</style>
+	</head>
+	<body>
+		<form action="" method="POST">
+			<input type="text" name="status" id="statusBox" />
+			<input type="submit" value="发表微博" />
+		</form>
+		<ul>
+			<% statuses.forEach(function(status){ %>
+			<li>
+				<a href="<%= status.user.url %>">
+					<img src="<%= status.user.profile_image_url %>" />	
+					<%= status.user.screen_name %>
+				</a>
+				<%= status.text %>
+				<% if (status.retweeted_status) { %>
+				<div class="retweet">
+					<a href="<%= status.retweeted_status.user.url %>">
+						<%= status.retweeted_status.user.screen_name %>
+					</a>
+					<%= status.retweeted_status.text %>
+				</div>
+				<% } %>
+			</li>
+			<% }) %>
+		<ul>
+	</body>
+</html>
