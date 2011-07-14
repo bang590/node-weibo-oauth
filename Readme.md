@@ -14,3 +14,5 @@ contact
 
 * bang590@gmail.com
 * http://cnbang.net/
+* http://weibo.com/bang
+* http://t.qq.com/bang
