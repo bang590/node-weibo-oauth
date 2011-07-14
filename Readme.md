@@ -13,4 +13,4 @@ contact
 ============
 
 * bang590@gmail.com
-* http://webang.net/
+* http://cnbang.net/
